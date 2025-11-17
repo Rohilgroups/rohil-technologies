@@ -1,10 +1,20 @@
+Options -MultiViews
 RewriteEngine On
+RewriteBase /
 
-# Remove .html extension
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+# Send old Google indexed .html pages to new React routes
+Redirect 301 /digital.html /digital-marketing
+Redirect 301 /testing.html /testing
+Redirect 301 /services.html /consulting/business-analytics
+Redirect 301 /billing.html /billing
+Redirect 301 /business.html /business/business-development
+Redirect 301 /marketing.html /business/email-marketing
+Redirect 301 /anaytics.html /about
 
-# Optional: Redirect .html to non-.html version (SEO Canonical)
-RewriteCond %{THE_REQUEST} "GET /(.+)\.html"
-RewriteRule ^ %1 [R=301,L]
+# If file or directory exists, serve it
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# React router fix – send all unknown routes to index.html
+RewriteRule ^ index.html [L]
