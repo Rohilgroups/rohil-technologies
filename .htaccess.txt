@@ -1,6 +1,6 @@
 Options -MultiViews
 RewriteEngine On
-
+#####
 # Force non-www to www (SEO Fix)
 RewriteCond %{HTTP_HOST} ^rohiltechnologies\.com [NC]
 RewriteRule ^(.*)$ https://www.rohiltechnologies.com/$1 [L,R=301]
