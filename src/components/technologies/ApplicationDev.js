@@ -16,9 +16,19 @@ import {
   BugReport,
   Speed,
   BarChart,
-} from "@mui/icons-material";
-import { Icon } from "@iconify/react";
+  
 
+} from "@mui/icons-material";
+import {
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+import { Helmet } from "react-helmet-async";
+
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 export default function ApplicationDev() {
   const devPlatforms = [
     { title: "Windows", icon: "mdi:microsoft-windows" },
@@ -113,8 +123,68 @@ export default function ApplicationDev() {
       icon: "mdi:tools",
     },
   ];
+  const process = [
+    "Requirement Analysis",
+    "UI/UX Design",
+    "Development",
+    "Testing",
+    "Deployment",
+    "Maintenance",
+  ];
   return (
     <>
+      <Helmet>
+        <title>Application Development Services | Rohil Technologies</title>
+
+        <meta
+          name="description"
+          content="Professional application development services by Rohil Technologies. We build scalable, secure, and custom software applications for businesses."
+        />
+
+        <meta
+          name="keywords"
+          content="Application Development Services, Custom Application Development, Software Application Development, Enterprise Application Development"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Application Development Services | Rohil Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Custom application development solutions for businesses."
+        />
+        <meta
+          property="og:url"
+          content="https://www.rohiltechnologies.com/application-development"
+        />
+        <meta
+          property="og:image"
+          content="https://www.rohiltechnologies.com/images/appdev.png"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Application Development Services | Rohil Technologies"
+        />
+        <meta
+          name="twitter:description"
+          content="Scalable and secure application development services."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.rohiltechnologies.com/images/appdev.png"
+        />
+
+        <link
+          rel="canonical"
+          href="https://www.rohiltechnologies.com/application-development"
+        />
+      </Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -132,6 +202,7 @@ export default function ApplicationDev() {
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
           <Typography
+            component="h1"
             variant="h2"
             sx={{
               fontWeight: "bold",
@@ -139,7 +210,7 @@ export default function ApplicationDev() {
               fontSize: { xs: "2rem", md: "3rem" },
             }}
           >
-            Application Development
+            Application Development Services
           </Typography>
         </Box>
         <Box
@@ -161,7 +232,7 @@ export default function ApplicationDev() {
           <Box sx={{ flex: 1 }}>
             <img
               src="/images/appdev1.png"
-              alt="Mobile App Development"
+              alt="Custom Application Development Services"
               style={{ width: "100%", borderRadius: "12px" }}
             />
           </Box>
@@ -288,7 +359,9 @@ export default function ApplicationDev() {
               >
                 {item.title}
               </Typography>
-              <Typography sx={{ color: colors.grey }}>{item.text}</Typography>
+              <Typography sx={{ color: colors.grey }}>
+                Industry-specific solutions tailored for business growth.
+              </Typography>
             </Box>
           ))}
         </Box>
@@ -421,6 +494,59 @@ export default function ApplicationDev() {
                   sx={{ fontWeight: "bold", color: colors.darkBlue, mt: 2 }}
                 >
                   {item.title}
+                </Typography>
+              </Box>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography
+          variant="h4"
+          sx={{
+            textAlign: "center",
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 4,
+          }}
+        >
+          Our Development Process
+        </Typography>
+
+        <Grid container spacing={3} justifyContent="center" sx={{ mb: 8 }}>
+          {process.map((step, index) => (
+            <Grid item xs={12} sm={6} md={2} key={index}>
+              <Box
+                sx={{
+                  p: 3,
+                  textAlign: "center",
+                  borderRadius: 3,
+                  boxShadow: 3,
+                  transition: "0.3s",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: 6,
+                  },
+                }}
+              >
+                <Typography
+                  variant="h5"
+                  sx={{
+                    color: colors.primary,
+                    fontWeight: "bold",
+                    mb: 1,
+                  }}
+                >
+                  {index + 1}
+                </Typography>
+
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontWeight: "bold",
+                    color: colors.darkBlue,
+                  }}
+                >
+                  {step}
                 </Typography>
               </Box>
             </Grid>
@@ -570,7 +696,7 @@ export default function ApplicationDev() {
             textAlign: "center",
           }}
         >
-          Technology
+          Technology We Use
         </Typography>
         <Typography sx={{ textAlign: "center", color: colors.grey, mb: 6 }}>
           We leverage the latest technologies to build high-quality mobile
@@ -582,7 +708,7 @@ export default function ApplicationDev() {
 
         <Grid container spacing={4} justifyContent="center" mb={8}>
           {technologies.map((item, i) => (
-            <Grid item xs={12} sm={6} md={2.3} key={i}>
+            <Grid item xs={12} sm={6} md={2} key={i}>
               <Box
                 sx={{
                   textAlign: "center",
@@ -609,6 +735,175 @@ export default function ApplicationDev() {
             </Grid>
           ))}
         </Grid>
+        <Container sx={{ py: 8 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              textAlign: "center",
+              fontWeight: 700,
+              color: colors.darkBlue,
+              mb: 5,
+            }}
+          >
+            Frequently Asked Questions
+          </Typography>
+
+          {[
+            {
+              question: "What is application development?",
+              answer:
+                "Application development is the process of designing, building, testing, deploying, and maintaining software applications tailored to business requirements.",
+            },
+            {
+              question: "How long does application development take?",
+              answer:
+                "Project timelines vary depending on complexity, features, integrations, and business requirements. Simple applications may take a few weeks, while enterprise solutions can take several months.",
+            },
+            {
+              question: "Do you provide maintenance support?",
+              answer:
+                "Yes. Rohil Technologies provides ongoing maintenance, security updates, performance optimization, bug fixes, and technical support after deployment.",
+            },
+            {
+              question: "Can applications be customized?",
+              answer:
+                "Absolutely. We develop custom application solutions tailored to your business processes, goals, and industry requirements.",
+            },
+            {
+              question: "Which technologies do you use?",
+              answer:
+                "We work with React, Angular, Node.js, Java, Python, .NET, Flutter, AWS, SQL, and other modern technologies.",
+            },
+          ].map((faq, index) => (
+            <Accordion
+              key={index}
+              sx={{
+                mb: 2,
+                borderRadius: "12px !important",
+                overflow: "hidden",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+                "&:before": {
+                  display: "none",
+                },
+              }}
+            >
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                sx={{
+                  backgroundColor: "#f8f9fa",
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontWeight: 600,
+                    color: colors.darkBlue,
+                  }}
+                >
+                  {faq.question}
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails>
+                <Typography
+                  sx={{
+                    color: colors.grey,
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {faq.answer}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </Container>
+      </Container>
+      {/* Related Services */}
+      <Container sx={{ py: 4 }}>
+        <Typography
+          variant="h4"
+          sx={{
+            textAlign: "center",
+            fontWeight: 700,
+            color: colors.darkBlue,
+            mb: 3,
+            mt: 4,
+          }}
+        >
+          Related Services
+        </Typography>
+
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: 2,
+            mb: 6,
+          }}
+        >
+          {[
+            { label: "Software Development", link: "/software-development" },
+            { label: "Mobile App Development", link: "/mobile" },
+            { label: "Website Development", link: "/web-technologies" },
+            { label: "ERP Solutions", link: "/erp" },
+          ].map((item, index) => (
+            <Button
+              key={index}
+              component={Link}
+              to={item.link}
+              variant="outlined"
+              sx={{
+                borderColor: colors.primary,
+                color: colors.darkBlue,
+                fontWeight: 600,
+                px: 3,
+                py: 1.2,
+                borderRadius: "30px",
+                textTransform: "none",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: colors.primary,
+                  color: "#fff",
+                  borderColor: colors.primary,
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+                },
+              }}
+            >
+              {item.label}
+            </Button>
+          ))}
+        </Box>
+      </Container>
+      <Container sx={{ py: 6, textAlign: "center" }}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: "bold",
+            color: colors.darkBlue,
+            mb: 2,
+          }}
+        >
+          Start Your Application Development Project Today
+        </Typography>
+
+        <Typography sx={{ mb: 4, color: colors.grey }}>
+          Build secure, scalable, and high-performance applications with Rohil Technologies.
+        </Typography>
+
+        <Button
+          component={Link}
+          to="/contact"
+          variant="contained"
+          size="large"
+          sx={{
+            backgroundColor: colors.primary,
+            px: 4,
+            py: 1.5,
+          }}
+        >
+          Request Free Consultation
+        </Button>
       </Container>
     </>
   );

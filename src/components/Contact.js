@@ -12,7 +12,7 @@ import {
   Alert,
 } from "@mui/material";
 import { motion } from "framer-motion";
-import { LocationOn, Phone, Email, WhatsApp } from "@mui/icons-material";
+import {  Phone, Email, WhatsApp } from "@mui/icons-material";
 import colors from "./Colors";
 import { Icon } from "@iconify/react";
 // Animation Variants

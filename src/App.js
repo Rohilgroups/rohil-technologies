@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import {
-  useNavigate,
   BrowserRouter as Router,
   Routes,
   Route,
@@ -47,7 +46,7 @@ import Seo from "./components/services/Seo";
 import SEM from "./components/services/SEM";
 import EcommerceSEO from "./components/services/EcommerceSEO";
 import VideoSEO from "./components/services/VideoSEO";
-
+import { HelmetProvider } from "react-helmet-async";
 function FloatingButtons() {
   const [loading, setLoading] = useState(true);
 
@@ -120,6 +119,7 @@ function FloatingButtons() {
 
 export default function App() {
   return (
+    <HelmetProvider>
     <Router>
       <Box
         sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
@@ -205,6 +205,7 @@ export default function App() {
         <Footer />
       </Box>
     </Router>
+    </HelmetProvider>
   );
 }
  
