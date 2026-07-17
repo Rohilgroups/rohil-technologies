@@ -1,8 +1,9 @@
 // src/components/BillingSoftware.js
 import React from "react";
-import { Box, Typography, Container, Divider } from "@mui/material";
+import { Box, Typography, Container, Divider,Button,Grid,Paper } from "@mui/material";
 import colors from "../Colors";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 
 export default function BillingSoftware() {
   // ===== ZigZag Sections for Billing Software Features =====
@@ -83,7 +84,31 @@ export default function BillingSoftware() {
       ],
     },
   ];
+const services = [
+  {
+    title: "About Us",
+    description: "Learn more about Rohil Technologies.",
+    icon: "mdi:account-group",
+    path: "/about",
+  },
+  
+  {
+    title: "Web Development",
+    description: "Modern responsive website solutions.",
+    icon: "mdi:web",
+    path: "/web-technologies",
+  },
+  {
+    title: "Mobile App Development",
+    description: "Android & iOS app development.",
+    icon: "mdi:cellphone",
+    path: "/mobile",
+  },
+ 
+  
 
+ 
+];
   return (
     <>
       {/* ===== Hero Banner ===== */}
@@ -102,12 +127,16 @@ export default function BillingSoftware() {
         }}
       >
         <Box sx={{ position: "relative", zIndex: 2, px: 2 }}>
-          <Typography
-            variant="h2"
-            sx={{ fontWeight: "bold", fontSize: { xs: "2rem", md: "3rem" } }}
-          >
-            Billing Software
-          </Typography>
+       <Typography
+  component="h1"
+  variant="h2"
+  sx={{
+    fontWeight: "bold",
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Smart Billing Software for Modern Businesses
+</Typography>
         </Box>
       </Box>
 
@@ -213,6 +242,269 @@ export default function BillingSoftware() {
           </Container>
         </Box>
       ))}
+      <Container sx={{ py: { xs: 6, md: 8 } }}>
+  <Typography
+    component="h2"
+    variant="h3"
+    sx={{
+      fontWeight: 700,
+      color: colors.darkBlue,
+      textAlign: "center",
+      mb: 3,
+    }}
+  >
+    Simplify Your Billing with Rohil Technologies
+  </Typography>
+
+  <Typography
+    sx={{
+      maxWidth: "900px",
+      mx: "auto",
+      textAlign: "center",
+      color: colors.grey,
+      lineHeight: 1.9,
+      fontSize: "1.05rem",
+    }}
+  >
+    Rohil Technologies Billing Software is a powerful and easy-to-use
+    solution designed for retail stores, supermarkets, pharmacies,
+    restaurants, wholesale businesses, and service providers. Our software
+    enables GST-compliant billing, inventory management, customer
+    management, sales reporting, and real-time business analytics to improve
+    productivity and business growth.
+  </Typography>
+</Container>
+<Box
+  sx={{
+    py: { xs: 5, md: 8 },
+    background: "#f8fbff",
+  }}
+>
+  <Container maxWidth="lg"
+  sx={{
+    px:{xs:2,sm:3,md:0}
+  }}>
+    
+
+   <Box
+  sx={{
+    py: { xs: 5, md: 8 },
+    background: "#f8fbff",
+  }}
+>
+  <Container
+    maxWidth="lg"
+    sx={{
+      px: { xs: 2, sm: 3, md: 0 },
+    }}
+  >
+    <Typography
+      variant="h3"
+      sx={{
+        textAlign: "center",
+        fontWeight: 700,
+        color: colors.darkBlue,
+        mb: 2,
+        fontSize: { xs: "2rem", md: "3rem" },
+      }}
+    >
+      Explore More Services
+    </Typography>
+
+    <Typography
+      sx={{
+        textAlign: "center",
+        color: colors.grey,
+        mb: { xs: 4, md: 6 },
+        maxWidth: 700,
+        mx: "auto",
+      }}
+    >
+      Discover our innovative technology solutions designed to help your
+      business grow faster and smarter.
+    </Typography>
+
+    <Grid
+      container
+      spacing={{ xs: 3, sm: 3, md: 4 }}
+    >
+      {services.map((item, index) => (
+        <Grid item xs={12} sm={6} md={3} key={index}>
+          <Paper
+            component={Link}
+            to={item.path}
+            elevation={3}
+            sx={{
+              textDecoration: "none",
+              borderRadius: 4,
+              p: 4,
+              minHeight: 320,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textAlign: "center",
+              transition: "0.3s",
+              width: "100%",
+              "&:hover": {
+                transform: "translateY(-8px)",
+                boxShadow: 8,
+              },
+            }}
+          >
+            <Box
+              sx={{
+                width: 80,
+                height: 80,
+                borderRadius: "50%",
+                bgcolor: "#eef5ff",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                mb: 2,
+              }}
+            >
+              <Icon
+                icon={item.icon}
+                width={40}
+                color={colors.primary}
+              />
+            </Box>
+
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 700,
+                color: colors.darkBlue,
+                mb: 1,
+              }}
+            >
+              {item.title}
+            </Typography>
+
+            <Typography
+              variant="body2"
+              sx={{
+                color: colors.grey,
+                mb: 3,
+                flexGrow: 1,
+              }}
+            >
+              {item.description}
+            </Typography>
+
+            <Button
+              component={Link}
+              to={item.path}
+              variant="contained"
+              fullWidth
+              sx={{
+                borderRadius: "30px",
+                py: 1.2,
+                textTransform: "none",
+                fontWeight: 600,
+                backgroundColor: colors.primary,
+                "&:hover": {
+                  backgroundColor: colors.darkBlue,
+                },
+              }}
+            >
+              Learn More
+            </Button>
+          </Paper>
+        </Grid>
+      ))}
+    </Grid>
+  </Container>
+</Box>
+  </Container>
+</Box>
+<Box
+  sx={{
+    py: 10,
+    background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.darkBlue} 100%)`,
+    color: "#fff",
+    textAlign: "center",
+    borderRadius: 4,
+    mx: { xs: 2, md: 6 },
+    my: 8,
+  }}
+>
+  <Container maxWidth="md">
+    <Typography
+      variant="h3"
+      sx={{
+        fontWeight: 700,
+        mb: 2,
+      }}
+    >
+      Ready to Simplify Your Billing?
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: "1.1rem",
+        lineHeight: 1.8,
+        opacity: 0.9,
+        mb: 5,
+      }}
+    >
+      Automate invoicing, manage inventory, generate GST-compliant bills,
+      and track your business performance with Rohil Technologies Billing
+      Software.
+    </Typography>
+
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        gap: 2,
+        flexWrap: "wrap",
+      }}
+    >
+      <Button
+        component={Link}
+        to="/contact"
+        variant="contained"
+        sx={{
+          bgcolor: "#fff",
+          color: colors.primary,
+          px: 4,
+          py: 1.5,
+          borderRadius: "30px",
+          fontWeight: 700,
+          textTransform: "none",
+          "&:hover": {
+            bgcolor: "#f5f5f5",
+          },
+        }}
+      >
+        Request Demo
+      </Button>
+
+      <Button
+        component={Link}
+        to="/services"
+        variant="outlined"
+        sx={{
+          borderColor: "#fff",
+          color: "#fff",
+          px: 4,
+          py: 1.5,
+          borderRadius: "30px",
+          fontWeight: 700,
+          textTransform: "none",
+          "&:hover": {
+            borderColor: "#fff",
+            bgcolor: "rgba(255,255,255,0.1)",
+          },
+        }}
+      >
+        Explore Services
+      </Button>
+    </Box>
+  </Container>
+</Box>
     </>
   );
 }
