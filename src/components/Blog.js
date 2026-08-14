@@ -5058,6 +5058,100 @@ fullContent: (
     </Box>
   ),
 },
+
+
+
+{
+  id: 50,
+  title: "Agentic AI: The Next Evolution of Artificial Intelligence",
+  date: "August 11, 2026",
+  category: "ARTIFICIAL INTELLIGENCE",
+  image: "/blogs/blog-39.jpeg",
+
+  snippet:
+    "As artificial intelligence advances in 2026, Agentic AI is emerging as the next major evolution, moving beyond simple prompt-based interactions toward autonomous systems capable of planning, reasoning, making decisions, and executing multi-step tasks.",
+
+  fullContent: (
+    <Box sx={{ mt: 2 }}>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        As artificial intelligence advances in 2026, Agentic AI is emerging as the next major evolution, moving beyond simple prompt-based interactions toward autonomous systems capable of planning, reasoning, making decisions, and executing multi-step tasks. Businesses are increasingly exploring AI agents to automate workflows, improve productivity, personalize customer experiences, and support complex decision-making across industries.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        The rise of Agentic AI marks a significant shift from traditional AI assistants to intelligent systems that can independently work toward defined goals. Unlike conventional AI tools that respond to individual prompts, AI agents can understand objectives, break complex problems into smaller tasks, use digital tools, access relevant information, evaluate results, and adapt their actions based on changing conditions. For enterprises, this opens new possibilities in areas such as software development, digital marketing, customer support, finance, healthcare, and business operations. For example, AI agents can monitor marketing campaigns, analyze performance data, generate content, and recommend optimization strategies with minimal human intervention. In software development, agentic systems can assist with coding, testing, debugging, and documentation, helping development teams accelerate delivery. However, challenges remain around reliability, data privacy, security, transparency, and human oversight. Organizations must establish clear governance and validation processes before allowing AI agents to make high-impact decisions independently. As AI models become more capable and better connected with enterprise tools, Agentic AI is expected to become an important part of modern digital transformation. For businesses like Rohil Technologies, adopting agentic approaches can create smarter workflows, reduce repetitive work, enhance operational efficiency, and help organizations build more intelligent and scalable digital solutions. Beyond automation, Agentic AI represents a transition toward AI systems that can think, plan, act, and continuously improve toward business goals.
+      </Typography>
+
+      <Divider sx={{ my: 2, borderColor: colors.grey }} />
+
+      <Typography
+        variant="body2"
+        sx={{ color: colors.grey, fontStyle: "italic" }}
+      >
+        Keywords: Agentic AI, Artificial Intelligence, AI Agents,
+        Autonomous AI, AI Automation, Intelligent Systems,
+        Business Automation, Digital Transformation,
+        AI-Powered Solutions, Rohil Technologies
+      </Typography>
+
+    </Box>
+  ),
+},
+
+
+
+{
+  id: 51,
+  title: "AI-Powered Software Testing: The Future of Quality Assurance",
+  date: "August 14, 2026",
+  category: "SOFTWARE DEVELOPMENT",
+  image: "/blogs/blog-40.jpeg",
+
+  snippet:
+    "AI-powered software testing is transforming quality assurance by using artificial intelligence and automation to generate test cases, detect defects, predict failures, and improve software reliability.",
+
+  fullContent: (
+    <Box sx={{ mt: 2 }}>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        As software development becomes faster and more complex, AI-powered software testing is emerging as a powerful approach to improving quality assurance. By combining artificial intelligence, machine learning, and automation, modern testing systems can identify defects, generate test cases, analyze application behavior, and predict potential failures with greater speed and accuracy. This transformation is helping development teams reduce testing time, improve software reliability, and deliver high-quality digital products.
+      </Typography>
+
+      <Typography
+        variant="body1"
+        paragraph
+        sx={{ mb: 2, color: colors.black, lineHeight: 1.8 }}
+      >
+        The integration of AI into software testing is changing traditional quality assurance from manual and repetitive testing to intelligent and continuous validation. AI-powered tools can automatically create test scenarios, analyze user behavior, detect unusual patterns, and prioritize high-risk areas that require attention. Machine learning can analyze historical defect data to identify application components that may be more likely to fail, helping testers focus their efforts efficiently. AI also supports automated regression testing by detecting affected areas after code changes and running relevant test cases automatically. In modern development environments, AI can assist with test script generation, bug detection, visual testing, API testing, and performance analysis, improving overall development efficiency. However, challenges including data quality, false positives, security risks, tool integration, and the need for human expertise must be considered. AI does not replace QA professionals; instead, it supports them by handling repetitive tasks and providing useful insights. As organizations adopt Agile, DevOps, and continuous integration practices, AI-powered testing is becoming an important part of modern software development. For businesses like Rohil Technologies, AI-driven quality assurance can help accelerate releases, reduce defects, improve application performance, and deliver more reliable digital solutions. Ultimately, AI-powered software testing represents a move toward smarter, predictive, and continuously improving quality assurance.making it a key technology for the future of software development
+      </Typography>
+
+      <Divider sx={{ my: 2, borderColor: colors.grey }} />
+
+      <Typography
+        variant="body2"
+        sx={{ color: colors.grey, fontStyle: "italic" }}
+      >
+        Keywords: AI-Powered Software Testing, Artificial Intelligence,
+        Software Testing, Quality Assurance, Test Automation,
+        Machine Learning, Bug Detection, Automated Testing,
+        Software Quality, Rohil Technologies
+      </Typography>
+
+    </Box>
+  ),
+},
   ];
 
   return (
