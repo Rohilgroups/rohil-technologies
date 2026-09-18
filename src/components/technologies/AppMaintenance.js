@@ -189,47 +189,40 @@ export default function AppMaintenance() {
 
 
       <Helmet>
-        <title>
-          Application Maintenance Services | Rohil Technologies
-        </title>
+  <title>Application Maintenance Services | Rohil Technologies</title>
 
-        <meta
-          name="description"
-          content="Professional application maintenance services by Rohil Technologies. Improve software performance, security, monitoring, and support."
-        />
+  <meta
+    name="description"
+    content="Rohil Technologies provides reliable application maintenance services to improve software performance, security, scalability, and long-term application reliability."
+  />
 
-        <meta
-          name="keywords"
-          content="
-Application Maintenance Services,
-Software Maintenance Services,
-Application Support Services,
-Application Monitoring
-"
-        />
+  <meta
+    name="keywords"
+    content="Application Maintenance Services, Software Maintenance Services, Application Support Services, Application Monitoring, Application Performance Optimization, Software Support Services"
+  />
 
-        <link
-          rel="canonical"
-          href="https://www.rohiltechnologies.com/application-maintenance"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
+  <link
+    rel="canonical"
+    href="https://www.rohiltechnologies.com/application-maintenance"
+  />
 
-            "@type": "Service",
-
-            "name": "Application Maintenance Services",
-
-            "description":
-              "Professional application maintenance and support services.",
-
-            "provider": {
-              "@type": "Organization",
-              "name": "Rohil Technologies"
-            }
-          })}
-        </script>
-      </Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Application Maintenance Services",
+      description:
+        "Rohil Technologies provides reliable application maintenance services to improve software performance, security, scalability, and long-term application reliability.",
+      provider: {
+        "@type": "Organization",
+        name: "Rohil Technologies",
+        url: "https://www.rohiltechnologies.com",
+      },
+      areaServed: "Worldwide",
+      serviceType: "Application Maintenance Services",
+    })}
+  </script>
+</Helmet>
       {/* ===== Hero Banner ===== */}
       <Box
         sx={{
@@ -246,17 +239,17 @@ Application Monitoring
         }}
       >
         <Box sx={{ position: "relative", zIndex: 2 }}>
-          <Typography
-            component="h2"
-            variant="h3"
-            sx={{
-              fontWeight: "bold",
-              mb: 2,
-              fontSize: { xs: "2rem", md: "3rem" },
-            }}
-          >
-            Application Maintenance & Support
-          </Typography>
+         <Typography
+  component="h1"
+  variant="h3"
+  sx={{
+    fontWeight: "bold",
+    mb: 2,
+    fontSize: { xs: "2rem", md: "3rem" },
+  }}
+>
+  Application Maintenance Services
+</Typography>
         </Box>
         <Box
           sx={{ position: "absolute", inset: 0, bgcolor: "rgba(0,0,0,0.5)" }}
@@ -274,12 +267,17 @@ Application Monitoring
         >
           {/* Text Section */}
           <Box sx={{ flex: 1 }}>
-            <Typography
-              variant="h3"
-              sx={{ fontWeight: "bold", color: colors.darkBlue, mb: 3 }}
-            >
-              Application Maintenance & Support
-            </Typography>
+         <Typography
+  component="h2"
+  variant="h3"
+  sx={{
+    fontWeight: "bold",
+    color: colors.darkBlue,
+    mb: 3,
+  }}
+>
+  Reliable Application Support and Maintenance
+</Typography>
             <Typography sx={{ color: colors.grey, mb: 2 }}>
               Our Application Maintenance and Support services ensure your
               software continues to run efficiently, securely, and with
@@ -608,6 +606,7 @@ Application Monitoring
         </Grid>
 
       </Container>
+      
       <Container sx={{ py: 6 }}>
 
         <Typography
